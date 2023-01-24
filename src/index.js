@@ -3,6 +3,7 @@ import menuPage from './menu.js';
 import contactPage from './contact.js';
 
 
+
 const restaurant = () => {
     //header
     const header = document.createElement('header');
