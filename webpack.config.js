@@ -5,7 +5,7 @@ module.exports = {
     entry: './src/index.js',
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'restaurant page',
+            template: './src/template.html',
         }),
     ],
     output: {
