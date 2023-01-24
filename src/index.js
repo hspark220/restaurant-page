@@ -4,13 +4,17 @@ import contactPage from './contact.js';
 
 
 
-const restaurant = () => {
+const restaurant = (() => {
     //header
-    const header = document.createElement('header');
+    const _header = document.createElement('header');
 
     //navigation
     const _nav = document.createElement('div');
     _nav.setAttribute('id', 'nav');
+
+    //content
+    const _content = document.createElement('div');
+    _content.setAttribute('id','content');
     
     const _aboutBtn = document.createElement('input');
     const _menuBtn = document.createElement('input');
@@ -22,8 +26,7 @@ const restaurant = () => {
     _contactBtn.setAttribute('type', 'button');
     _contactBtn.setAttribute('id','contact');
 
-    header.appendChild(_nav);
-    _nav.append(_aboutBtn, _menuBtn, _contactBtn);
+    
     _aboutBtn.value = 'about';
     _menuBtn.value = 'menu';
     _contactBtn.value = 'contact';
@@ -32,7 +35,14 @@ const restaurant = () => {
     _menuBtn.addEventListener('click', menuPage);
     _contactBtn.addEventListener('click', contactPage);
 
-    return header
-}
+    const runPage = () => {
+        document.body.append(_header, _content)
+        _header.appendChild(_nav);
+        _nav.append(_aboutBtn, _menuBtn, _contactBtn);
+        aboutPage();
+    };
+    
+    return {runPage};
+})();
 
-document.body.append(restaurant());
+restaurant.runPage();
