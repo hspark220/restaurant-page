@@ -1,3 +1,6 @@
+import aboutPage from './about.js';
+import menuPage from './menu.js';
+import contactPage from './contact.js';
 
 
 const restaurant = () => {
@@ -24,13 +27,9 @@ const restaurant = () => {
     _menuBtn.value = 'menu';
     _contactBtn.value = 'contact';
 
-    const _clearContent = () => {
-        const content = document.getElementById('content');
-        while(content.firstChild) {
-            content.removeChild(content.firstChild());
-        }
-        
-    }
+    _aboutBtn.addEventListener('click', aboutPage);
+    _menuBtn.addEventListener('click', menuPage);
+    _contactBtn.addEventListener('click', contactPage);
 
     return header
 }
