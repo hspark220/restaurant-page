@@ -8,6 +8,9 @@ const aboutPage = () => {
     const about = document.createElement('div');
     const storeHours = document.createElement('div');
 
+    about.setAttribute('class','about');
+    storeHours.setAttribute('class','storehours');
+
     //about
     const aboutTitle = document.createElement('h2');
     const aboutText = document.createElement('p');
