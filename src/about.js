@@ -17,7 +17,8 @@ const aboutPage = () => {
     const aboutPicture = document.createElement('img');
 
     aboutTitle.innerHTML = "About Potatoe Works...";
-    aboutText.innerHTML = "Welcome to potato works, we cook and serve strictly potato related dishes";
+    aboutText.innerHTML = "Welcome to potato works, we cook and serve strictly potato related dishes.\
+                           Come and enjoy our course of potatos that have been cooked and prepared by the most top notch potato chefs! ";
     aboutPicture.setAttribute('src', './');
 
     //store hourse

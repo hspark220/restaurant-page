@@ -1,7 +1,7 @@
 import aboutPage from './about.js';
 import menuPage from './menu.js';
 import contactPage from './contact.js';
-
+import './style.css';
 
 
 const restaurant = (() => {
