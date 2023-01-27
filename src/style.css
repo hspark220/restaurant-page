@@ -15,6 +15,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    border: 1px solid;
 }
 
 .about {
@@ -44,4 +46,12 @@ body {
 }
 .storehours li {
     list-style: none;
+}
+
+.entry {
+    width: min(90%, 400px);
+    
+    display: grid;
+    grid-template-columns: 100px 0.5rem 1fr;
+    align-items: center;
 }

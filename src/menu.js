@@ -10,25 +10,30 @@ const menuPage = () => {
     const appetizer = document.createElement('div');
     const entree = document.createElement('div');
     const dessert = document.createElement('div');
+    const appetizerTitle = document.createElement('h3');
+    const entreeTitle = document.createElement('h3');
+    const dessertTitle = document.createElement('h3');
 
     title.setAttribute('class','title');
     appetizer.setAttribute('class','appetizer');
     entree.setAttribute('class','entree');
     dessert.setAttribute('class','dessert');
+    appetizer.setAttribute('class','entry');
+    entree.setAttribute('class','entry');
+    dessert.setAttribute('class','entry');
 
     //adding titles
     title.innerHTML = 'Menu'
-    appetizer.innerHTML = '<h3>Appetizer<h3>';
-    entree.innerHTML = '<h3>Entree<h3>';
-    dessert.innerHTML = '<h3>Dessert<h3>';
+    appetizerTitle.innerHTML = 'Appetizer';
+    entreeTitle.innerHTML = 'Entree';
+    dessertTitle.innerHTML = 'Dessert';
 
     //adding menu
     addMenu(appetizer, 'French Fries', 'potatoes cut up and deep fried', 4);
     addMenu(entree, 'Baked Potato','potato baked with toppings added', 11);
-    addMenu(dessert, 'Sweet Potato Cake', 'cheese cake flavored with sweet potato', 7);
+    addMenu(dessert, 'Sweet Potato Cake', 'sweet potato cheese cake', 7);
 
-
-    content.append(title, appetizer, entree, dessert);
+    content.append(title,appetizerTitle, appetizer, entreeTitle, entree, dessertTitle, dessert);
     document.body.append(content);
 }
 
