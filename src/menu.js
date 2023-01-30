@@ -3,8 +3,7 @@ import addMenu from './addMenu.js';
 
 const menuPage = () => {
     clearContent();
-    const content = document.createElement('div');
-    content.setAttribute('id','content');
+    const content = document.getElementById('content');
     //sections
     const title = document.createElement('h2');
     const appetizer = document.createElement('div');
@@ -34,7 +33,6 @@ const menuPage = () => {
     addMenu(dessert, 'Sweet Potato Cake', 'sweet potato cheese cake', 7);
 
     content.append(title,appetizerTitle, appetizer, entreeTitle, entree, dessertTitle, dessert);
-    document.body.append(content);
 }
 
 export default menuPage;

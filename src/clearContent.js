@@ -3,7 +3,6 @@ const clearContent = () => {
     while(content.firstChild) {
         content.removeChild(content.firstChild);
     }   
-    document.body.removeChild(content);
 }
 
 export default clearContent;

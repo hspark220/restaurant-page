@@ -4,9 +4,13 @@ import contactPage from './contact.js';
 import './style.css';
 
 
+
 const restaurant = (() => {
     //header
     const _header = document.createElement('header');
+    const _footer = document.createElement('footer');
+
+    _footer.setAttribute('id','footer');
 
     //navigation
     const _nav = document.createElement('div');
@@ -16,9 +20,12 @@ const restaurant = (() => {
     const _content = document.createElement('div');
     _content.setAttribute('id','content');
     
+    const _title = document.createElement('h1');
     const _aboutBtn = document.createElement('input');
     const _menuBtn = document.createElement('input');
     const _contactBtn = document.createElement('input');
+    
+    _title.innerHTML = "Potato Work";
     _aboutBtn.setAttribute('type', 'button');
     _aboutBtn.setAttribute('id','about');
     _menuBtn.setAttribute('type', 'button');
@@ -35,10 +42,15 @@ const restaurant = (() => {
     _menuBtn.addEventListener('click', menuPage);
     _contactBtn.addEventListener('click', contactPage);
 
+    const copyright = document.createElement('small');
+    copyright.setAttribute('id','copyright');
+    copyright.innerHTML = '©heonsoo';
+
     const runPage = () => {
-        document.body.append(_header, _content)
-        _header.appendChild(_nav);
+        document.body.append(_header, _content,_footer);
+        _header.append(_title, _nav);
         _nav.append(_aboutBtn, _menuBtn, _contactBtn);
+        //_footer.append(copyright);
         aboutPage();
     };
     

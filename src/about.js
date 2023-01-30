@@ -1,9 +1,10 @@
 import clearContent from './clearContent.js';
+import Picture from './aboutPicture.jpg';
 
 const aboutPage = () => {
     clearContent();
-    const content = document.createElement('div');
-    content.setAttribute('id','content');
+    const content = document.getElementById('content');
+    const footer = document.getElementById('footer');
     //sections
     const about = document.createElement('div');
     const storeHours = document.createElement('div');
@@ -14,12 +15,12 @@ const aboutPage = () => {
     //about
     const aboutTitle = document.createElement('h2');
     const aboutText = document.createElement('p');
-    const aboutPicture = document.createElement('img');
+    const aboutPicture = new Image();
 
     aboutTitle.innerHTML = "About Potatoe Works...";
     aboutText.innerHTML = "Welcome to potato works, we cook and serve strictly potato related dishes.\
                            Come and enjoy our course of potatos that have been cooked and prepared by the most top notch potato chefs! ";
-    aboutPicture.setAttribute('src', './');
+    aboutPicture.src = Picture;
 
     //store hourse
     const storeHoursTitle = document.createElement('h2');
@@ -37,12 +38,19 @@ const aboutPage = () => {
     sat.innerHTML = "Saturday      : 11:00am - 11:00pm";
     sun.innerHTML = "Sunday        : 11:00am - 05:00pm";
 
+    const citation = document.createElement('small');
+    citation.setAttribute('id','citation')
+    citation.innerHTML = 'photo by Fernanda Martinez on Unsplash';
+
     
     storeHoursBody.append(mwf, tth, sat, sun);
     storeHours.append(storeHoursTitle, storeHoursBody);
-    about.append(aboutTitle, aboutText, aboutPicture);
+    about.append(aboutTitle, aboutText, aboutPicture, citation);
     content.append(about, storeHours);
-    document.body.append(content);
+
+
+    
+
 }
 
 export default aboutPage;
