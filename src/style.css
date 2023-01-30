@@ -21,11 +21,12 @@ body {
 
 .about {
     display: grid;
-    grid-template: 5rem 2fr 1rem / 1fr 1fr;
+    grid-template: 5rem 2fr 1rem / repeat(2, 200px);
     grid-template-areas: 
     "title title"
     "desc picture"
     "blank citation";
+    column-gap: 2rem;
     padding: 0 20%;
     
 }
@@ -35,10 +36,12 @@ body {
 }
 .about p {
     grid-area: desc;
+    margin: 0;
 }
 .about img {
     grid-area: picture;
     height: 300px;
+    width: 200px;
 }
 #citation {
     grid-area: citation;
@@ -46,6 +49,7 @@ body {
     justify-self: start;
 }
 .storehours {
+    margin-top: 3rem;
 
 }
 .storehours ul {
@@ -61,8 +65,15 @@ body {
     width: min(90%, 400px);
     
     display: grid;
-    grid-template-columns: 100px 0.5rem 1fr;
+    grid-template: 3rem 1fr / 120px 0.5rem 1fr;
+    grid-template-areas: "title title title";
     align-items: center;
+}
+.entry h3 {
+    grid-area: title;
+    margin: 0;
+
+    border-bottom: solid;
 }
  
 

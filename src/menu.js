@@ -26,13 +26,18 @@ const menuPage = () => {
     appetizerTitle.innerHTML = 'Appetizer';
     entreeTitle.innerHTML = 'Entree';
     dessertTitle.innerHTML = 'Dessert';
+    appetizer.append(appetizerTitle);
+    entree.append(entreeTitle);
+    dessert.append(dessertTitle);
 
     //adding menu
     addMenu(appetizer, 'French Fries', 'potatoes cut up and deep fried', 4);
+    addMenu(appetizer, 'Potato Wedge', 'potatoes cut up and deep fried', 4);
     addMenu(entree, 'Baked Potato','potato baked with toppings added', 11);
     addMenu(dessert, 'Sweet Potato Cake', 'sweet potato cheese cake', 7);
 
-    content.append(title,appetizerTitle, appetizer, entreeTitle, entree, dessertTitle, dessert);
+    
+    content.append(title, appetizer, entree, dessert);
 }
 
 export default menuPage;
