@@ -56,6 +56,7 @@ header h1 {
     align-items: center;
     gap: 2rem;
 
+    
     padding-bottom: 3rem;
 }
 
@@ -115,7 +116,26 @@ header h1 {
 .entry > * {
     margin: 0;
 }
- 
+/* 
+contacts
+*/
+.contact-container {
+    width: min(90%, 410px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-container h2 {
+    padding-bottom: 1rem;
+}
+.contact-container p {
+    margin: 0;
+    align-self: flex-start
+}
+.contact-container strong {
+    box-shadow: inset 0 -0.4rem 0 #fcd34dda;
+}
+
 
 footer {
     width: min(100%, 800px);
@@ -138,3 +158,4 @@ body {
 #content {
     background-color: white;
 }
+
