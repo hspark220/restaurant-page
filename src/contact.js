@@ -1,7 +1,11 @@
 import clearContent from './clearContent.js';
+import shadeWord from './shadeWord.js';
 
 const contactPage = () => {
     clearContent();
+    const tab = document.getElementById('contact');
+    shadeWord(tab);
+
     const content = document.getElementById('content');
     
     const title = document.createElement('h2');

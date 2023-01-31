@@ -1,8 +1,13 @@
 import clearContent from './clearContent.js';
 import Picture from './aboutPicture.jpg';
+import shadeWord from './shadeWord.js';
 
 const aboutPage = () => {
+    //initialize content
     clearContent();
+    const tab = document.getElementById('about');
+    shadeWord(tab);
+
     const content = document.getElementById('content');
     const footer = document.getElementById('footer');
     //sections

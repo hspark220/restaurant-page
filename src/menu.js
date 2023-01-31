@@ -1,8 +1,12 @@
 import clearContent from './clearContent.js';
 import addMenu from './addMenu.js';
+import shadeWord from './shadeWord';
 
 const menuPage = () => {
     clearContent();
+    const tab = document.getElementById('menu');
+    shadeWord(tab);
+
     const content = document.getElementById('content');
     //sections
     const title = document.createElement('h2');

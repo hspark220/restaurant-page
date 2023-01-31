@@ -3,6 +3,12 @@
 * {
     font-family: Roboto, san-serif;
 }
+p, li {
+    font-size: 1.3rem;
+}
+.entry p {
+    font-size: 1rem;
+}
 
 /* 
 LAYOUT
@@ -33,9 +39,13 @@ header h1 {
     font-size: 1.3rem;
     font-weight: 900;
     border: none;
+    padding: 0;
+
 }
 #nav input:hover {
     cursor: pointer;
+    box-shadow: inset 0 -0.4rem 0 #fcd34dda;
+
 }
 
 
@@ -100,7 +110,7 @@ header h1 {
 }
 .entry h3 {
     grid-area: title;
-    border-bottom: solid;
+    border-bottom: 2px solid;
 }
 .entry > * {
     margin: 0;
